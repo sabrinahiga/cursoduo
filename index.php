@@ -1,69 +1,12 @@
 <?php
 header('Content-type: text/html; charset=utf-8');
 ini_set("display_errors",1);
-$variavel = "asas";
-//refinindo variaveis
-$resultado = 80;
 
-//criando funcoes
-function somar($a,$b){
-
-	 $resultado = $a + $b;
-
-	return $resultado;
-}
-
-// chamando funcoes
- somar(12,14);
-
-
-
-// +
-// -
-// *
-// /
-// %
-
-// >
-// <
-// >=
-// <=
-// ==  1==2
-// =
-// ===
-// !=
-// !==
-
-
-
-
- function media($nota ){
- 	if($nota > 5){
- 		$nota = "aprovado";
- 	}elseif($nota === 5){
- 		$nota = "é exatamente a $nota";
- 	}elseif($nota == 5){
- 		$nota = "é somente $nota";
- 	}else{
- 		$nota = "nenhuma das anteriores";
- 	}
-
- 	return $nota;
-
- }
-
-
-
-
-  //media(5);
-
-
+include 'funcoes.php';
 
 $valorDoFormulario = @$_POST['media'];
 
-
-
-
+//numerosPrimos(0,50);
 
 ?>
 
@@ -85,6 +28,22 @@ $valorDoFormulario = @$_POST['media'];
 
 </body>
 </html>
+
+
+
+
+<br />
+
+
+<?php
+
+for ($j=0; $j <=10 ; $j++) { //laço da linha
+	
+	for ($i=0; $i <= 10 ; $i++) { //laço da coluna
+	    defineX($j,$i);
+	}
+	echo "<br>";
+}
 
 
 
